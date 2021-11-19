@@ -1,1 +1,15 @@
-<p>nav-bar works!</p>
+<mat-toolbar color="primary" class="mat-elevation-z8">
+    <span><mat-icon>rocket</mat-icon>WolfflixAPI</span>
+
+    <div class="spacer"></div>
+
+    <a class="m-1" mat-button routerLink="/home"><mat-icon class="m-1">home</mat-icon>Home</a>
+    <a class="m-1" mat-button routerLink="/search"><mat-icon class="m-1">manage_search</mat-icon>Search</a>
+    <a class="m-1" mat-button routerLink="/series"><mat-icon class="m-1">video_library</mat-icon>Series</a>
+    <a class="m-1" mat-button routerLink="/popular"><mat-icon class="m-1">verified</mat-icon>Popular</a>
+
+</mat-toolbar>
+
+
+
+<router-outlet></router-outlet>
