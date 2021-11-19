@@ -12,9 +12,9 @@ import { MatToolbarModule, } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule} from '@angular/material/icon';
 import { SearchComponent } from './search/search.component';
-import { SearchDetailsComponent } from './search-details/search-details.component';
+import { MovieDetailsComponent } from './filmes/movie-details/movie-details.component';
+import { SeriesDetailsComponent } from './series/series-details/series-details.component';
 import { SeriesComponent } from './series/series.component';
-import { SeriesDetailsComponent } from './series-details/series-details.component';
 
 
 
@@ -25,7 +25,7 @@ import { SeriesDetailsComponent } from './series-details/series-details.componen
     NavBarComponent,
     FilmesComponent,
     SearchComponent,
-    SearchDetailsComponent,
+    MovieDetailsComponent,
     SeriesComponent,
     SeriesDetailsComponent
   ],
