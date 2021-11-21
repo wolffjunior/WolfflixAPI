@@ -9,7 +9,7 @@
         <div class="d-flex row flex-wrap justify-content-center">
 
             <div class="m-3" *ngFor="let i of movies">
-                <a [routerLink]="'filmes/details/' + i.id">
+                <a [routerLink]="'filmes/movie-details/' + i.id">
                 <img [src]="getMovieImage(i.poster_path)">
                 </a>
             </div>
