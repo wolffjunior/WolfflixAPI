@@ -1,1 +1,89 @@
-<p>series-details works!</p>
+<div class="main-div flex-wrap">
+    <div class="backdrop" [style.background-image]="'url(&quot;' + 'https://www.themoviedb.org/t/p/original/' + seriesDetails?.backdrop_path + '&quot;)'">
+        
+    </div>
+    <div class="general-info">
+        <!-- <div class="title">
+            <p>{{seriesDetails?.name}}</p>
+        </div> -->
+        <h2 class="title ml-2">{{seriesDetails?.name}}</h2>
+        <div class="main-info ">
+            <div class="d-flex row">
+                <p class="ml-4 details">{{seriesDetails?.last_air_date|date:'y'}}</p>
+                <p class="ml-4 details">{{seriesDetails?.number_of_seasons}} Temporadas</p>
+                <p class="ml-4 details">Avaliation: {{seriesDetails?.vote_average}}</p>
+            </div>
+            <div class="d-flex row genres ml-3">
+                <p class="mr-3" *ngFor="let genre of seriesDetails?.genres">{{genre?.name}}</p>
+
+            </div>
+            <div class="overview col-lg-4 text-justify">
+                <p>{{seriesDetails?.overview}}</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="fundo flex-wrap">
+    <div id="cor" class="text-center">
+        <p>{{seriesDetails?.name}}</p>
+
+    </div>
+    <div id="cor" class="container-fluid">
+        <div class="row">
+            <div id="description" class="col-lg-8">
+                <div class="opacity">
+                    <p>{{seriesDetails?.overview}}</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <img id="imagem" src="https://image.tmdb.org/t/p/w500/{{ seriesDetails?.poster_path }}" />
+                
+            </div>
+        </div>
+    </div>
+</div> -->
+<!-- <img src="https://image.tmdb.org/t/p/w400/{{ seriesDetails?.backdrop_path }}"/>  -->

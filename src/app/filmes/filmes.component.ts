@@ -51,5 +51,9 @@ export class FilmesComponent implements OnInit {
     return `https://image.tmdb.org/t/p/w300/${path}`
   }
 
+  onClick(id: number){
+    console.log(id)
+  }
+
 
 }
