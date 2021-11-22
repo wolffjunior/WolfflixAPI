@@ -15,6 +15,7 @@ import { SearchComponent } from './search/search.component';
 import { MovieDetailsComponent } from './filmes/movie-details/movie-details.component';
 import { SeriesDetailsComponent } from './series/series-details/series-details.component';
 import { SeriesComponent } from './series/series.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 
 
@@ -36,7 +37,8 @@ import { SeriesComponent } from './series/series.component';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent],

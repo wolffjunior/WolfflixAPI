@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { MoviesPopular } from '../_model/Movies';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { APIkey, BaseURL } from "src/environments/environment"
 
 @Injectable({
   providedIn: 'root'
@@ -17,12 +18,12 @@ export class FilmesService {
   ) { }
 
     public getMoviesPopular():Observable<any> {
-      return this.httpClient.get('https://api.themoviedb.org/3/movie/popular?api_key=33aca62f5382fd9e99d030f68d10ab50&language=en-US&page=1')
+      return this.httpClient.get(`${BaseURL}movie/popular?api_key=${APIkey}&language=en-US&page=1`)
     }
 
     public getMovieDetails(id: number): Observable<any> {
       console.log('AAAAAAAAAAAAAAAAAAAAAAAAAA', id)
-      return this.httpClient.get(`https://api.themoviedb.org/3/movie/${id}?api_key=33aca62f5382fd9e99d030f68d10ab50&language=en-US`)
+      return this.httpClient.get(`${BaseURL}movie/${id}?api_key=${APIkey}&language=en-US`)
   }
     
 }
