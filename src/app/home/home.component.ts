@@ -12,7 +12,6 @@ export class HomeComponent implements OnInit {
   topRated: any
   nowPlaying: any
   tvSeries: any
-  term: any
 
   constructor(
     public homeService: homeService,
