@@ -1,1 +1,25 @@
-<p>movie-details works!</p>
+<div class="main-div flex-wrap">
+    <div class="backdrop" [style.background-image]="'url(&quot;' + 'https://www.themoviedb.org/t/p/original/' + movieDetails?.backdrop_path + '&quot;)'">
+        
+    </div>
+    <div class="general-info">
+        <!-- <div class="title">
+            <p>{{seriesDetails?.name}}</p>
+        </div> -->
+        <h2 class="title ml-2">{{movieDetails?.title}}</h2>
+        <div class="main-info ">
+            <div class="d-flex row">
+                <p class="ml-4 details">{{movieDetails?.last_air_date|date:'y'}}</p>
+                <p class="ml-4 details">Avaliation: {{movieDetails?.vote_average}}</p>
+            </div>
+            <div class="d-flex row genres ml-3">
+                <p class="mr-3" *ngFor="let genre of movieDetails?.genres">{{genre?.name}}</p>
+
+            </div>
+            <div class="overview col-lg-4 text-justify">
+                <p>{{movieDetails?.overview}}</p>
+            </div>
+
+        </div>
+    </div>
+</div>
