@@ -19,5 +19,10 @@ export class FilmesService {
     public getMoviesPopular():Observable<any> {
       return this.httpClient.get('https://api.themoviedb.org/3/movie/popular?api_key=33aca62f5382fd9e99d030f68d10ab50&language=en-US&page=1')
     }
+
+    public getMovieDetails(id: number): Observable<any> {
+      console.log('AAAAAAAAAAAAAAAAAAAAAAAAAA', id)
+      return this.httpClient.get(`https://api.themoviedb.org/3/movie/${id}?api_key=33aca62f5382fd9e99d030f68d10ab50&language=en-US`)
+  }
     
 }
