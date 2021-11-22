@@ -1,1 +1,42 @@
-<p>home works!</p>
+<div class="fundo">
+
+    <div class="d-flex justify-content-lg-start">
+        <p id="cor" class="m-5">Top Rated Movies</p>
+    </div>
+    <div>
+        <div class="d-flex row justify-content-center">
+
+            <div class="m-3 d-flex row" *ngFor="let i of topRated">
+                <a  [routerLink]="'/filmes/movie-details/' + i?.id">
+                <img [src]="getSerieImage(i.poster_path)">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-lg-start">
+        <p id="cor" class="m-5">Now Playing Movies</p>
+    </div>
+    <div>
+        <div class="d-flex row justify-content-center">
+
+            <div class="m-3 d-flex row" *ngFor="let i of nowPlaying">
+                <a  [routerLink]="'/filmes/movie-details/' + i?.id">
+                <img [src]="getSerieImage(i.poster_path)">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-lg-start">
+        <p id="cor" class="m-5">Tv Series</p>
+    </div>
+    <div>
+        <div class="d-flex row justify-content-center">
+
+            <div class="m-3 d-flex row" *ngFor="let i of tvSeries">
+                <a  [routerLink]="'/series/series-details/' + i?.id">
+                <img [src]="getSerieImage(i.poster_path)">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
